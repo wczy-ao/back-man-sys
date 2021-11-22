@@ -4,8 +4,7 @@ import router from './router'
 import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-
-import './service/axios_demo'
+import hyrequest from './service'
 
 const app = createApp(App)
 
@@ -14,4 +13,25 @@ app.use(store)
 app.use(ElementPlus)
 app.mount('#app')
 
-console.log(process.env.VUE_APP_API_URL)
+/**
+ * 单独的请求拦截
+hyrequest.request({
+  url: '/home/multidata',
+  method: 'GET',
+  interceptors: {
+    requestInterceptor: (config) => {
+      console.log('单独的请求拦截')
+      return config
+    },
+    responseInterceptor: (res) => {
+      console.log('单独的响应成功')
+      return res
+    }
+  }
+})
+ */
+
+hyrequest.request({
+  url: '/home/multidata',
+  method: 'GET'
+})
