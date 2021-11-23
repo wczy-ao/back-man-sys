@@ -31,7 +31,12 @@ hyrequest.request({
 })
  */
 
-hyrequest.request({
-  url: '/home/multidata',
-  method: 'GET'
-})
+hyrequest
+  .request({
+    url: '/home/multidata',
+    method: 'GET',
+    showLoading: false
+  })
+  .then((res) => {
+    console.log(res)
+  })
