@@ -4,7 +4,7 @@ import { RouteRecord } from 'vue-router'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/main'
+    redirect: '/login'
   },
   {
     path: '/main',

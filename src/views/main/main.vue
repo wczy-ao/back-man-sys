@@ -3,15 +3,14 @@
   <el-button type="primary">提交</el-button>
 </template>
 
-<script>
-export default {
-  data() {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup() {
     return {}
-  },
-  // created() {},
-  // mounted() {},
-  methods: {}
-}
+  }
+})
 </script>
 
 <style scoped lang="less"></style>
