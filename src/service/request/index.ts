@@ -83,6 +83,21 @@ class HYRequest {
         })
     })
   }
+  get<T>(config: HYRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'GET' })
+  }
+
+  post<T>(config: HYRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'POST' })
+  }
+
+  delete<T>(config: HYRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'DELETE' })
+  }
+
+  patch<T>(config: HYRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'PATCH' })
+  }
 }
 
 // 根据不同的拦截放上不同的token
