@@ -16,13 +16,3 @@ app.use(store)
 app.use(ElementPlus)
 setupStore()
 app.mount('#app')
-
-hyrequest
-  .request({
-    url: '/home/multidata',
-    method: 'GET',
-    showLoading: false
-  })
-  .then((res) => {
-    console.log(res)
-  })
